@@ -46,7 +46,7 @@ jobs:
             "https://repo1.maven.org/maven2/net/java/dev/jna/jna-platform/${JNA_VER}/jna-platform-${JNA_VER}.jar"
           {
             echo "CLASSPATH=$HOME/jna/jna-${JNA_VER}.jar:$HOME/jna/jna-platform-${JNA_VER}.jar${CLASSPATH:+:$CLASSPATH}"
-            echo "JAVA_TOOL_OPTIONS=--enable-native-access=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED ${JAVA_TOOL_OPTIONS:-}"
+            echo "JAVA_TOOL_OPTIONS=--enable-native-access=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED ${JAVA_TOOL_OPTIONS:-}"
           } >> "$GITHUB_ENV"
       - uses: egao1980/cl-repository/.github/actions/ci@main
         with:
