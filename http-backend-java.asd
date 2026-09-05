@@ -1,5 +1,5 @@
 (defsystem "http-backend-java"
-  :version "0.1.0"
+  :version "0.1.1"
   :description "Java HttpClient + WebSocket backends for http-protocol / ws-protocol (ABCL)"
   :author "egao1980"
   :license "MIT"
@@ -8,8 +8,7 @@
                "quri"
                "babel"
                "alexandria"
-               "bordeaux-threads"
-               "cl-base64")
+               "bordeaux-threads")
   :serial t
   :pathname "src"
   :components ((:file "package")
